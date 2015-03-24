@@ -1,7 +1,6 @@
 {
     "name": "zackkitzmiller/tiny",
-    "homepage": "http://github.com/zackkitzmiller/tiny-php",
-    "type": "library",
+    "description": "A reversible base62 ID obfuscater.",
     "license": "MIT",
     "authors": [
         {
