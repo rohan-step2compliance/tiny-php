@@ -9,7 +9,7 @@ return array(
     |
     | Key that the Tiny class uses.
     |
-    */
+     */
 
     'key' => '',
 
