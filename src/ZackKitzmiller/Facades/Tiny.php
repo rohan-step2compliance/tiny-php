@@ -1,9 +1,8 @@
-<?php namespace League\Tiny\Facades;
+<?php namespace ZackKitzmiller\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Tiny extends Facade
-{
+class Tiny extends Facade {
 
     protected static function getFacadeAccessor()
     {

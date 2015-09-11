@@ -4,11 +4,11 @@
 
 $path = dirname(__FILE__);
 
-include $path . '/../src/Tiny.php';
+include $path . '/../src/ZackKitzmiller/Tiny.php';
 
 echo "Generating TinyPHP Random Set...\n";
 
-$set = \League\Tiny\Tiny::generate_set();
+$set = \ZackKitzmiller\Tiny::generate_set();
 
 echo "Set Generated\n";
 echo "Set: {$set} \n\n";

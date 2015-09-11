@@ -1,12 +1,10 @@
-<?php namespace League\Tiny;
+<?php namespace ZackKitzmiller;
 
-class Tiny
-{
+class Tiny {
 
     protected $set = null;
 
-    public function __construct($set)
-    {
+    public function __construct($set) {
         $this->set = $set;
     }
 
@@ -46,10 +44,7 @@ class Tiny
         $arr = array();
 
         for ($i = 65; $i <= 122; $i++) {
-            if ($i < 91 || $i > 96) {
-                $arr[] = chr($i);
-            }
-
+            if ($i < 91 || $i > 96) $arr[] = chr($i);
         }
 
         $arr = array_merge($arr, range(0, 9));
