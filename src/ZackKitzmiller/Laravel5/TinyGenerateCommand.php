@@ -1,5 +1,6 @@
 <?php namespace ZackKitzmiller\Laravel5;
 
+use ZackKitzmiller\Tiny;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
