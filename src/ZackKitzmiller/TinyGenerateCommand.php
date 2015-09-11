@@ -1,10 +1,9 @@
-<?php namespace League\Tiny;
+<?php namespace ZackKitzmiller;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
-class TinyGenerateCommand extends Command
-{
+class TinyGenerateCommand extends Command {
 
     protected $name = 'tiny:generate';
 
@@ -23,20 +22,20 @@ class TinyGenerateCommand extends Command
 
         $key = Tiny::generate_set();
 
-        $contents = str_replace($this->laravel['config']['league/tiny::key'], $key, $contents);
+        $contents = str_replace($this->laravel['config']['zackkitzmiller/tiny::key'], $key, $contents);
 
         $this->files->put($path, $contents);
 
-        $this->laravel['config']['league/tiny::key'] = $key;
+        $this->laravel['config']['zackkitzmiller/tiny::key'] = $key;
 
         $this->info("Tiny key [$key] has been set.");
     }
 
     protected function getKeyFile()
     {
-        $env = $this->option('env') ? $this->option('env') . '/' : '';
+        $env = $this->option('env') ? $this->option('env').'/' : '';
 
-        $contents = $this->files->get($path = $this->laravel['path'] . "/config/packages/league/tiny/{$env}config.php");
+        $contents = $this->files->get($path = $this->laravel['path']."/config/packages/zackkitzmiller/tiny/{$env}config.php");
 
         return array($path, $contents);
     }

@@ -1,5 +1,5 @@
 {
-    "name": "league/tiny",
+    "name": "zackkitzmiller/tiny",
     "description": "A reversible base62 ID obfuscater.",
     "license": "MIT",
     "authors": [
@@ -22,8 +22,6 @@
         "league/phpunit-coverage-listener": "~1.1"
     },
     "autoload": {
-        "psr-4": {
-            "League\\Tiny\\": "src"
-        }
+        "psr-0": {"ZackKitzmiller": "src/"}
     }
 }
