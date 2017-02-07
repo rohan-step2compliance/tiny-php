@@ -7,7 +7,7 @@ class TinyServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->app['tiny.generate'] = $this->app->share(function ($app) {
+        $this->app->singleton('tiny.generate', function () {
             return new TinyGenerateCommand();
         });
 
@@ -16,7 +16,7 @@ class TinyServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app['tiny'] = $this->app->share(function ($app) {
+        $this->app->singleton('tiny', function () {
             $key = getenv('LEAGUE_TINY_KEY');
 
             return new Tiny($key);
